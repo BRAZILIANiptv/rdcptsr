@@ -1,13 +1,8 @@
-
 name: Cl
-
 on: [push, workflow_dispatch]
-
 jobs:
   build:
-
     runs-on: windows-latest
-
     steps:
     - name: Download
       run: Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
@@ -24,5 +19,3 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Create Tunnel
       run: .\ngrok\ngrok.exe tcp 3389
-name Cl.txt
-Displaying name Cl.txt.
